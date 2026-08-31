@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% seo %}
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2316233a'/%3E%3Cpath d='M12 5l7 12H5z' fill='%232f7d6b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+  <!-- Site-wide LocalBusiness structured data — helps search engines show
+       rich results (hours, phone, address) directly in search. Per-page
+       Service schema lives inline on each service page. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "{{ site.business.name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "telephone": "{{ site.business.phone }}",
+    "email": "{{ site.business.email }}",
+    "priceRange": "$$$",
+    "areaServed": "Denver Metro Area",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.business.street }}",
+      "addressLocality": "{{ site.business.city }}",
+      "addressRegion": "{{ site.business.region }}",
+      "postalCode": "{{ site.business.postal_code }}",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Fr 08:00-17:30"
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include header.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+</html>

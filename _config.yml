@@ -1,0 +1,44 @@
+title: Halstead Business Consulting
+description: >-
+  Halstead Business Consulting advises growing companies across the
+  Denver metro on strategy, finance, marketing, and operations —
+  fixed-scope engagements with a single advisor from kickoff to handoff.
+url: "https://webdashy.github.io"
+baseurl: "/halstead-business-consulting"
+lang: en_US
+
+author:
+  name: Halstead Business Consulting
+
+business:
+  name: Halstead Business Consulting
+  phone: "+1-303-555-0161"
+  phone_display: "(303) 555-0161"
+  email: hello@halsteadconsulting.example
+  street: 1700 Lincoln St, Suite 2200
+  city: Denver
+  region: CO
+  postal_code: "80203"
+  license: "CMC-004521"
+  founded: 2011
+  years_building: 15
+  hours: "Mon–Fri, 8am–5:30pm MT"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules

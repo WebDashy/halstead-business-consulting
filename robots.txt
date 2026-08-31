@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://webdashy.github.io/halstead-business-consulting/sitemap.xml
